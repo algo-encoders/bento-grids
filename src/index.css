@@ -1,13 +1,48 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  body {
+    font-family: Helvetica;
+    font-size: clamp(0.75rem, 0.605vw + 0.608rem, 1.125rem);
+    line-height: 1.65;
+    font-style: normal;
+    letter-spacing: 0.543px;
+    font-weight: 400;
+    @apply text-body;
+  }
+
+  h2 {
+    font-size: clamp(1rem, 0.807vw + 0.811rem, 1.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.326px;
+  }
+
+  .card1__image-wrap {
+    padding-bottom: 51%;
+  }
+
+  .card {
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .card1__image-second {
+    opacity: 0;
+  }
+
+  .card1:hover .card1__image-first {
+    opacity: 0;
+  }
+
+  .card1:hover .card1__image-second {
+    opacity: 1;
+  }
+
+  .card1__image-first,
+  .card1__image-second {
+    transition: opacity 0.5s ease-out;
+  }
 }
