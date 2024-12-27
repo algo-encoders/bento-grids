@@ -10,7 +10,6 @@ import gsap from "gsap";
 
 const Card3 = () => {
   const cardRef = useRef(null);
-  const timelineRef = useRef(null);
 
   useEffect(() => {
     const card = cardRef.current;
