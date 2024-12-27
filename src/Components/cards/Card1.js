@@ -4,7 +4,7 @@ import image_second from "../../images/card1/image_second.svg";
 
 const Card1 = () => {
   return (
-    <div className="card card1 col-span-1 md:col-span-3 row-span-1 md:row-span-2 bg-custom-gradient flex flex-col md:gap-6">
+    <div className="rounded-2xl justify-between card card1 w-full h-full row-span-1 md:row-span-2 bg-custom-gradient flex flex-col md:gap-6">
       <Text
         title="Channel manager"
         content="Easily collaborate with colleagues to quickly solve complex problems,

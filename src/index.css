@@ -10,6 +10,7 @@
     font-style: normal;
     letter-spacing: 0.543px;
     font-weight: 400;
+    background-color: #fcc5c5;
     @apply text-body;
   }
 
@@ -33,6 +34,187 @@
     opacity: 0;
   }
 
+  .card1__image-first,
+  .card1__image-second {
+    transition: opacity 0.5s ease-out;
+  }
+
+  /* Card2 */
+
+  .card2__image-wrap {
+    transition: all 0.5s ease-out;
+  }
+
+  .card3 {
+    --transition: all 0.5s ease-out;
+  }
+
+  .card3 div.content__wrap {
+    position: absolute;
+    left: 8px;
+    bottom: 24px;
+    z-index: 2;
+    width: 75%;
+    overflow: hidden;
+    transform-origin: left;
+    transition: var(--transition);
+  }
+
+  .card3 div.content__wrap .content {
+    width: 100%;
+  }
+
+  .card3 .stats {
+    width: 40%;
+    right: -18px;
+    bottom: 8px;
+    z-index: 1;
+    transition: var(--transition);
+  }
+
+  .card3 .company {
+    width: 66%;
+    top: 20px;
+    left: 20px;
+    transition: var(--transition);
+  }
+
+  .card3__image-wrap {
+    padding-bottom: 73%;
+    transition: var(--transition);
+  }
+
+  .card3 .cursor {
+    bottom: -30%;
+    right: 120px;
+    z-index: 5;
+    opacity: 0;
+    transition: var(--transition);
+  }
+
+  .card3 .small_icon {
+    right: 5%;
+    bottom: calc(37%);
+    transition: var(--transition);
+  }
+
+  .card3 .large_icon {
+    right: -15%;
+    bottom: 25%;
+    opacity: 0;
+    transition: var(--transition);
+  }
+
+  .card4__image-wrap {
+    padding-bottom: 73%;
+  }
+
+  .card4__image-wrap img {
+    transition: all 0.3s ease-out;
+  }
+
+  .card4__image-wrap .card-image {
+    width: 60%;
+  }
+
+  .card4__image-wrap .mobile-image {
+    position: absolute;
+    left: 8px;
+    bottom: 0;
+    width: 70%;
+  }
+
+  .card4__image-wrap .card-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .card5__image-wrap {
+    padding-bottom: 79%;
+  }
+
+  .card5__image-wrap img {
+    position: absolute;
+    transition: all 0.3s ease-out;
+  }
+
+  .card5__bg {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 72%;
+  }
+
+  .card5__profile {
+    right: 20px;
+    bottom: 0;
+    width: 43%;
+  }
+
+  .card5__mobile {
+    left: 3%;
+    bottom: 0;
+    width: 70%;
+  }
+
+  .card6 {
+    --transition: all 0.5s ease-out;
+  }
+
+  .card6__image-wrap {
+    padding-bottom: 68%;
+  }
+
+  .card6__bg-wrap {
+    top: 0;
+    left: 50%;
+    translate: -50% 0;
+    width: 72%;
+    height: 100%;
+  }
+
+  .card6__image-wrap img {
+    position: absolute;
+  }
+
+  .card6__header {
+    width: 77%;
+    left: 50%;
+    top: 10%;
+    translate: -50% 0;
+    z-index: 1;
+    transition: var(--transition);
+  }
+
+  .card6__mobile {
+    width: 77%;
+    left: 50%;
+    top: 58%;
+    translate: -50% 0;
+    transition: var(--transition);
+  }
+
+  .card6__wifi,
+  .card6__wifi2 {
+    width: 38%;
+    transition: var(--transition);
+  }
+
+  .card6__wifi {
+    right: 11.5%;
+    top: 58%;
+  }
+
+  .card6__wifi-2 {
+    right: 35%;
+    top: -30%;
+    transition: var(--transition);
+    opacity: 0;
+  }
+
+  /* All hover animation */
+
   .card1:hover .card1__image-first {
     opacity: 0;
   }
@@ -41,8 +223,91 @@
     opacity: 1;
   }
 
-  .card1__image-first,
-  .card1__image-second {
-    transition: opacity 0.5s ease-out;
+  .card2:hover .card2__image-wrap {
+    scale: 1.45;
+    translate: 39% 0;
+  }
+
+  .card3:hover {
+    .content__wrap {
+      bottom: 30%;
+      width: 95%;
+    }
+
+    .stats {
+      right: -8px;
+    }
+
+    .company {
+      top: 17%;
+      left: 0;
+    }
+
+    .cursor {
+      bottom: 26%;
+      right: 9%;
+      opacity: 1;
+    }
+
+    .small_icon {
+      right: 24%;
+      bottom: 48%;
+      scale: 0.7;
+      opacity: 0;
+    }
+
+    .large_icon {
+      right: 5%;
+      opacity: 1;
+    }
+  }
+
+  .card4:hover {
+    .mobile-image {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .card-image {
+      width: 100%;
+      transition: all 0.3s ease-out;
+    }
+  }
+
+  .card5:hover {
+    .card5__profile {
+      right: 50%;
+      bottom: 7%;
+      translate: 50%;
+      scale: 1.2;
+      transform-origin: bottom right;
+    }
+
+    .card5__mobile {
+      left: -14%;
+    }
+  }
+
+  .card6:hover {
+    .card6__wifi-2 {
+      right: 11.5%;
+      top: 10%;
+      opacity: 1;
+    }
+
+    .card6__wifi {
+      right: 25.5%;
+      top: 105%;
+      opacity: 0;
+    }
+
+    .card6__header {
+      top: 105%;
+      opacity: 0;
+    }
+
+    .card6__mobile {
+      top: 10%;
+    }
   }
 }
